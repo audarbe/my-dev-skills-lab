@@ -36,17 +36,30 @@ form {
 
 .list-section {
     grid-area: list;
+    text-align: left;
     border: 1px solid red;
 }
 
 form, .list-section {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
 }
 
 ul {
     list-style: none;
+    width: 100%;
+}
+
+li {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid red;
+    justify-content: space-between;
+}
+
+.list-delete-button {
+    background-color: red;
 }
 
 @media (min-width: 768px) {
