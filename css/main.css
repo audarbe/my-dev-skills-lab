@@ -5,39 +5,67 @@
 }
 
 body {
+    color: #2C3E50;
+    background-color: lightskyblue;
     height: 100vh;
     max-width: 1200px;
     font-family: 'Montserrat', sans-serif;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 20% auto 20%;
+    grid-template-rows: 20% 200px auto;
     grid-template-areas:
     "header"
-    "list"
-    "form";
+    "form"
+    "list";
 }
 
 
 header {
     grid-area: header;    
-    background-color: lightgoldenrodyellow;
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 2rem;
 }
 
 form {
     grid-area: form;
     display: flex;
-    border: 1px solid red;
+    flex-direction: column;
 }
 
+form > * {
+    width: 80%;
+    margin: 0 auto 10px auto;
+    height: 4rem;
+    border-radius: 20px;
+}
+
+input {
+    background-color: transparent;
+    border: 2px solid white;
+    font-size:16px;
+    padding-left: 20px;
+}
+
+.add-skill-button {
+    font-size: 1.5rem;
+    width: 40%;
+    background-color: #2C3E50;
+    border: 0;
+    color: white;
+}
 
 .list-section {
     grid-area: list;
     text-align: left;
-    border: 1px solid red;
+    width: 80%;
+    margin: 0 auto;
 }
 
 form, .list-section {
@@ -52,14 +80,24 @@ ul {
 }
 
 li {
+
+    background-color: rgba(255, 255, 255);
+    border-radius: 20px;
+    height: 4rem;
+    padding: 20px;
+    margin-bottom: 10px;
     display: flex;
     flex-direction: row;
-    border: 1px solid red;
     justify-content: space-between;
 }
 
 .list-delete-button {
-    background-color: red;
+    width: 30px;
+    font-size: 1.5rem;
+    color: darkgray;
+    background-color: tranpsarent;
+    border: 0;
+    font-weight: 800;
 }
 
 @media (min-width: 768px) {
@@ -72,13 +110,9 @@ li {
     }
 
     header {
-        justify-content: flex-start;
+        /* justify-content: flex-start; */
+        width: 50%;
     }
-}
 
-/* @media (min-width: 1024px) {
-    body {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 25% auto;
-    }
-} */
+    form > * {
+}
